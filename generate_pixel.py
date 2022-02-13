@@ -75,6 +75,10 @@ if __name__ == "__main__":
         g = rand.randint(0, 255)
         b = rand.randint(0, 255)
     
+    def rescale(image, scale):
+
+        return image.resize((scale, scale), resample=Image.BOX)
+    
     
     if not os.path.isdir(output_folder):
         print("ERROR: output_path is a file not a folder!")
@@ -92,6 +96,7 @@ if __name__ == "__main__":
     
     for i in range(iterations): # still only generates one element, dont know why yet
         nft = generate_pixel(r, g, b)
+        nft = rescale(nft, 100)
         hex_value = get_hex(r, g, b)
 
         path = f"{output_folder}\\{hex_value}.png" # only works for windows!!
