@@ -2,17 +2,13 @@
 from ctypes.wintypes import RGB
 import os
 import sys
+from HexScraper import scrape_hexvalues
 
 import random as rand
 from turtle import color
 import PIL as pil
 
 from PIL import Image, ImageColor
-
-import requests
-from bs4 import BeautifulSoup
-
-
 
 def generate_pixel(r, g, b):
     '''
@@ -42,12 +38,6 @@ def get_hex(r, g, b):
     hex_value = '#%02x%02x%02x' % (r, g, b)
 
     return hex_value
-
-def scrape_hexvalues():
-    URL = "https://opensea.io/collection/the-colors-dot-art"
-    page = requests.get(URL)
-    print(page.text) # Returning a security alert, have to work with api 
-
 
 if __name__ == "__main__":
 
