@@ -55,9 +55,9 @@ if __name__ == "__main__":
         sys.exit(-1) ''' 
         #I would rather give it a relative path as default, remove it again if you dont want that
         
-        print('Using standard folder \Pixels')
+        print('Using standard folder \TestData')
         dirname = os.getcwd()
-        output_folder = str(dirname) + '\Pixels'
+        output_folder = str(dirname) + '\TestData'
         
 
     Colors = False #checking if user wants to configure colors
