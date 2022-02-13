@@ -97,3 +97,7 @@ if __name__ == "__main__":
         path = f"{output_folder}\\{hex_value}.png" # only works for windows!!
 
         store_pixel(nft, path)
+        
+        r = rand.randint(0, 255)
+        g = rand.randint(0, 255)
+        b = rand.randint(0, 255)
