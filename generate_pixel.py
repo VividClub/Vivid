@@ -2,7 +2,7 @@
 from ctypes.wintypes import RGB
 import os
 import sys
-from HexScraper import scrape_hexvalues
+from HexScraper import Scraper
 
 import random as rand
 from turtle import color
@@ -92,7 +92,8 @@ if __name__ == "__main__":
             iterations = int(sys.argv[i+1])
             print('Will be generating %s elements' %(str(iterations)))
     
-    scrape_hexvalues()
+    CollectionScraper = Scraper()
+    CollectionScraper.scrape_assets()
     
     for i in range(iterations): # still only generates one element, dont know why yet
         nft = generate_pixel(r, g, b)
