@@ -92,8 +92,15 @@ if __name__ == "__main__":
             iterations = int(sys.argv[i+1])
             print('Will be generating %s elements' %(str(iterations)))
     
-    CollectionScraper = Scraper()
-    CollectionScraper.scrape_assets()
+    
+    Scrape = False #checking if user wants to configure colors
+    for i in range ( len ( sys.argv)):
+        if sys.argv[i].lower() == '--scrape':
+            CollectionScraper = Scraper()
+            CollectionScraper.scrape_assets()
+            #CollectionScraper.scrape_collection_info()
+            Scrape = True
+    
     
     for i in range(iterations): # still only generates one element, dont know why yet
         nft = generate_pixel(r, g, b)
