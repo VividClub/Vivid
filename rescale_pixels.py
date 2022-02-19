@@ -25,13 +25,13 @@ if __name__ == '__main__':
         
     Resize = False        
     for i in range ( len ( sys.argv)):
-        if sys.argv[i].lower() == '--size':
+        if sys.argv[i].lower() == '--scale':
             Resize = True
             size = int(sys.argv[i+1])
             
     
     if Resize == False:
-        print('Setting Standard Size 1px')
+        print('Setting Standard scale 1px')
         size = 1
         
     for path in FilePaths:
